@@ -1,0 +1,1019 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"subcatego",
+				"subcategory_id"
+			],
+			[
+				"sub",
+				"subcategories"
+			],
+			[
+				"set_relation",
+				"set_relation_n_n"
+			],
+			[
+				"Sub",
+				"subcategories"
+			],
+			[
+				"field",
+				"field_type"
+			],
+			[
+				"subc",
+				"subcategory_name"
+			],
+			[
+				"subcat",
+				"subcategories"
+			],
+			[
+				"cat",
+				"cat_query"
+			],
+			[
+				"business",
+				"business_id"
+			],
+			[
+				"db",
+				"db_table"
+			],
+			[
+				"parent",
+				"parent_category_id"
+			],
+			[
+				"auc",
+				"auction_attribute_values_model"
+			],
+			[
+				"attr",
+				"auction_attribute_values_model"
+			],
+			[
+				"bu",
+				"business_id"
+			],
+			[
+				"paren",
+				"parent_category_id"
+			],
+			[
+				"att",
+				"att_val_id"
+			],
+			[
+				"att_",
+				"att_val"
+			],
+			[
+				"attribute",
+				"attribute_values"
+			],
+			[
+				"auction",
+				"auction_attribute_values"
+			],
+			[
+				"fk_auction_attr",
+				"fk_auction_attribute_values_auction_id_idx"
+			],
+			[
+				"fk_auction",
+				"fk_auction_attribute_values_attribute_value_id_idx"
+			],
+			[
+				"att_val",
+				"att_val_id"
+			],
+			[
+				"sub_a",
+				"sub_att_id"
+			],
+			[
+				"attributes",
+				"attributes_values"
+			],
+			[
+				"fk",
+				"fk_attributes_businesses_business_id_idx"
+			],
+			[
+				"admin",
+				"admin_auctions_data"
+			],
+			[
+				"ca",
+				"category_id"
+			],
+			[
+				"fk_sub",
+				"fk_subcategory_elements_subcategories_subcategory_idx"
+			],
+			[
+				"bus",
+				"bus_id"
+			],
+			[
+				"up",
+				"upload_path"
+			],
+			[
+				"uplo",
+				"upload_path"
+			],
+			[
+				"backgroun",
+				"background_image"
+			],
+			[
+				"settings",
+				"settings_arr"
+			],
+			[
+				"back",
+				"background_image"
+			],
+			[
+				"link",
+				"link_color"
+			],
+			[
+				"setting_",
+				"setting_value_panel_body_background_color"
+			],
+			[
+				"ran",
+				"randomRange"
+			],
+			[
+				"my",
+				"myStorage"
+			],
+			[
+				"ch",
+				"checkProp"
+			],
+			[
+				"num",
+				"numScore"
+			],
+			[
+				"is",
+				"isItTrue"
+			],
+			[
+				"un",
+				"undefined"
+			],
+			[
+				"setting_val",
+				"setting_value_link_color"
+			],
+			[
+				"setting_value",
+				"setting_value_panel_heading_color"
+			],
+			[
+				"settin",
+				"setting_background"
+			],
+			[
+				"setting",
+				"setting_value_panel_heading_color"
+			],
+			[
+				"sett",
+				"setting_value_panel_color"
+			],
+			[
+				"scope",
+				"scope_id"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"user",
+				"user-color"
+			],
+			[
+				"red",
+				"redsox"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"scop",
+				"scope_id"
+			],
+			[
+				"sco",
+				"scope_id"
+			],
+			[
+				"form",
+				"form_validation"
+			],
+			[
+				"news",
+				"news_item"
+			],
+			[
+				"ufn_rand",
+				"ufn_rand_char"
+			],
+			[
+				"ufn",
+				"ufn_rand_range"
+			],
+			[
+				"ufn_",
+				"ufn_str_random_firstname"
+			],
+			[
+				"Kirby",
+				"KirbySamusHat"
+			],
+			[
+				"say",
+				"sayPoyo"
+			],
+			[
+				"fa",
+				"favoriteNums"
+			],
+			[
+				"cube",
+				"cubeResult"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"plural",
+				"pluralNoun"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"chara",
+				"characterAge"
+			],
+			[
+				"char",
+				"characterName"
+			],
+			[
+				"backgrou",
+				"background-color\tproperty"
+			],
+			[
+				"padding",
+				"padding\tproperty"
+			],
+			[
+				"head",
+				"header\tTag"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"final",
+				"finalizeAllParts"
+			],
+			[
+				"cur",
+				"curDuration"
+			],
+			[
+				"splitRa",
+				"splitRawChordProg"
+			],
+			[
+				"split",
+				"splitRawChordProg"
+			],
+			[
+				"spli",
+				"splitRawChordProg"
+			],
+			[
+				"raw",
+				"rawChordProg"
+			],
+			[
+				"e4_",
+				"e4_2"
+			],
+			[
+				"g4_",
+				"g4_2"
+			],
+			[
+				"c",
+				"cChord3"
+			],
+			[
+				"alto",
+				"altoSet"
+			],
+			[
+				"tenor",
+				"tenorSet"
+			],
+			[
+				"miss",
+				"missingNote"
+			],
+			[
+				"missing",
+				"missingNote"
+			],
+			[
+				"melod",
+				"melodyInd2"
+			],
+			[
+				"melo",
+				"melodyInd2"
+			],
+			[
+				"temp",
+				"tempMelodyNote"
+			],
+			[
+				"sopr",
+				"soprano"
+			],
+			[
+				"so",
+				"Soprano"
+			],
+			[
+				"soprano",
+				"sopranoNote"
+			],
+			[
+				"bass",
+				"bassNote"
+			],
+			[
+				"get",
+				"getMissingNotes"
+			],
+			[
+				"chord",
+				"chordMelody"
+			],
+			[
+				"bot",
+				"botOfRange"
+			],
+			[
+				"key",
+				"keyChromatic"
+			],
+			[
+				"g",
+				"gChord"
+			],
+			[
+				"cho",
+				"chordProg"
+			],
+			[
+				"chod",
+				"chord"
+			],
+			[
+				"type",
+				"typeOfNote"
+			],
+			[
+				"Time",
+				"TimeSignature"
+			],
+			[
+				"chor",
+				"chordProg"
+			],
+			[
+				"P",
+				"PriorityQueue"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"state",
+				"state2"
+			],
+			[
+				"sol",
+				"solve_counter"
+			],
+			[
+				"olen",
+				"olen2"
+			],
+			[
+				"tiles",
+				"tiles1"
+			],
+			[
+				"goal",
+				"goal_moves"
+			],
+			[
+				"rand",
+				"rand_tiles"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"count",
+				"count_inversions"
+			],
+			[
+				"temp_",
+				"temp_tiles"
+			],
+			[
+				"coun",
+				"count_conflicts"
+			],
+			[
+				"col",
+				"col_count"
+			],
+			[
+				"confl",
+				"conflict_helper"
+			],
+			[
+				"row",
+				"row_count"
+			],
+			[
+				"cur_",
+				"cur_row"
+			],
+			[
+				"max_row",
+				"max_row_element"
+			],
+			[
+				"in",
+				"in_middle"
+			],
+			[
+				"last",
+				"lastTaken"
+			],
+			[
+				"Array",
+				"ArrayList"
+			],
+			[
+				"next",
+				"nextL"
+			],
+			[
+				"Arra",
+				"ArrayList"
+			],
+			[
+				"value",
+				"values"
+			],
+			[
+				"strLen",
+				"strLen2"
+			],
+			[
+				"strl",
+				"strLen2"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ChoirNote.java",
+			"settings":
+			{
+				"buffer_size": 198,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Chord.java",
+			"settings":
+			{
+				"buffer_size": 2806,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Driver.java",
+			"settings":
+			{
+				"buffer_size": 8963,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Harmonizer.java",
+			"settings":
+			{
+				"buffer_size": 12084,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Note.java",
+			"settings":
+			{
+				"buffer_size": 136,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 414.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Keen/Desktop/Senior Project"
+	],
+	"file_history":
+	[
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/third_party/grocery_crud/models/Grocery_crud_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Subcategories_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Categories_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/auctions/details.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/V002__schema.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Auctions_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Bidders_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/language/english/site_lang.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/libraries/Users_library.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/logs/log-2019-09-06.log",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/logs/log-2019-09-07.log",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Breaks_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Fulfillments_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Payments_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Payouts_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Winners_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/auth/register.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/partials/topnav.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/profile/index.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/site.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/auction.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/subcategory_deep_data.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/test-sample.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/node_modules/lodash/_setData.js",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/node_modules/lodash/lodash.js",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/node_modules/tough-cookie/lib/cookie.js",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/README.md",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/user_guide/_static/underscore-1.3.1.js",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/mtdowling/jmespath.php/src/Utils.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/config/development/config.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/config/production/config.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/config/testing/config.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Auctions.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Auth.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Breakers.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Breaks.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Cron.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Profile.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Test.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Webhooks.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/breaks/details.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/auctioneers/dashboard.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Attribute_values_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Settings.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Attributes_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Auction_attribute_values_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Auctioneers_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/controllers/Admin.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/auth.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/libraries/Braintree.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Settings_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Profile_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/V001__ion_auth.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Divisions_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Teams_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Users_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/system/core/Loader.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/system/database/DB_driver.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/system/database/DB.php",
+		"/C/Users/Keen/Desktop/auctionTS/auction_test/master_query.sql",
+		"/C/Users/Keen/Desktop/auctionTS/auction_test/cleanup.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/breaks/list.php",
+		"/C/xampp/htdocs/codeigniter/application/views/news/index.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/V005__business_schema.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_variables.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/templates/base.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/partials/index.html",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/V004__settings_schema.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/templates/core.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/settings/index.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/core/MY_Controller.php",
+		"/C/Users/Keen/Desktop/auctionTS/possiblecustomizations.txt",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/templates/site.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/images/favicon.ico",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_panels.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_tables.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/utilities/_text.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_lists.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_navbar.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_braintree.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_bootstrap.scss",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/system/database/DB_query_builder.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/vendor/codeigniter/framework/user_guide/libraries/file_uploading.html",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/images/GroupMe_2019115_112810.jpeg",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/config/routes.php",
+		"/C/Users/Keen/Desktop/webdev_practice/htmlcheatsheet/blog.html",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/auth/login.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/third_party/ion_auth/libraries/Ion_auth.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/config/ion_auth.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/cache.php",
+		"/C/Users/Keen/Desktop/halp.txt",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/models/Breakers_model.php",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/views/templates/index.html",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/css/site.css",
+		"/C/Users/Keen/Pictures/shyguykirby.jpg",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/scss/_pagination.scss",
+		"/C/xampp/htdocs/codeigniter/application/config/routes.php",
+		"/C/xampp/htdocs/codeigniter/application/views/news/create.php",
+		"/C/xampp/htdocs/codeigniter/application/models/News_model.php",
+		"/C/xampp/htdocs/codeigniter/application/views/news/view.php",
+		"/C/xampp/htdocs/codeigniter/application/views/news/success.php",
+		"/C/xampp/htdocs/codeigniter/application/config/database.php",
+		"/C/xampp/htdocs/codeigniter/system/core/Controller.php",
+		"/C/xampp/htdocs/codeigniter/application/views/templates/footer.php",
+		"/C/xampp/htdocs/codeigniter/application/views/templates/header.php",
+		"/C/xampp/htdocs/codeigniter/application/views/pages/about.php",
+		"/C/xampp/htdocs/codeigniter/application/views/pages/home.php",
+		"/C/Users/Keen/Downloads/sample-data.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V005__business_schema.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V003__lookup_data.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V002__schema.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V001__ion_auth.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V004__settings_schema.sql",
+		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/flyway-localhost.bat",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/deployment/sql/V006__sample_user_data.sql",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/assets/css/lib/bootstrap-datetimepicker.min.css",
+		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/third_party/grocery_crud/libraries/Grocery_crud.php",
+		"/C/xampp/htdocs/playground/article-header.php",
+		"/C/xampp/htdocs/playground/useful-tools.php",
+		"/C/xampp/htdocs/phplessons/index.php",
+		"/C/xampp/htdocs/playground/header.html",
+		"/C/xampp/htdocs/playground/footer.html",
+		"/C/xampp/htdocs/playground/phpfun2.php",
+		"/C/xampp/htdocs/playground/site.php",
+		"/C/Users/Keen/Desktop/webdev_practice/csscheatsheet/css/style.css",
+		"/C/Users/Keen/Desktop/webdev_practice/csscheatsheet/index.html",
+		"/C/Users/Keen/Desktop/webdev_practice/blog.html",
+		"/C/Users/Keen/Desktop/webdev_practice/index.html"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ChoirNote.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Chord.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Driver.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3917,
+								3917
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 62.2857142857,
+						"translation.y": 810.285714286,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Harmonizer.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6886,
+								6886
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2080.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Note.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								136,
+								136
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 209.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 26.8571428571
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "master.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 51.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
