@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"to",
+				"toString"
+			],
+			[
 				"cate",
 				"categories"
 			],
@@ -510,10 +514,6 @@
 			[
 				"strLen",
 				"strLen2"
-			],
-			[
-				"strl",
-				"strLen2"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "ChoirNote.java",
 			"settings":
 			{
-				"buffer_size": 198,
+				"buffer_size": 306,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,8 +539,7 @@
 			"file": "Driver.java",
 			"settings":
 			{
-				"buffer_size": 8963,
-				"encoding": "UTF-8",
+				"buffer_size": 9043,
 				"line_ending": "Windows"
 			}
 		},
@@ -548,8 +547,7 @@
 			"file": "Harmonizer.java",
 			"settings":
 			{
-				"buffer_size": 12084,
-				"encoding": "UTF-8",
+				"buffer_size": 12900,
 				"line_ending": "Windows"
 			}
 		},
@@ -613,10 +611,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Users/Keen/Desktop/Senior Project"
-	],
 	"file_history":
 	[
 		"/C/Users/Keen/Desktop/auctionTS/transeo_auction/application/third_party/grocery_crud/models/Grocery_crud_model.php",
@@ -781,7 +775,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -790,7 +784,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 198,
+						"buffer_size": 306,
 						"regions":
 						{
 						},
@@ -847,44 +841,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8963,
+						"buffer_size": 9043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3917,
-								3917
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 62.2857142857,
-						"translation.y": 810.285714286,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Harmonizer.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12084,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6886,
-								6886
+								0,
+								0
 							]
 						],
 						"settings":
@@ -893,7 +858,36 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2080.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Harmonizer.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -912,8 +906,8 @@
 						"selection":
 						[
 							[
-								136,
-								136
+								0,
+								0
 							]
 						],
 						"settings":
@@ -924,7 +918,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -970,7 +964,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
-	"project": "master.sublime-project",
+	"project": "",
 	"replace":
 	{
 		"height": 40.0

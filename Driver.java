@@ -33,10 +33,12 @@ public class Driver
 		String name = scanner.nextLine();
 		System.out.println();
 
+		//check if time signature is valid
 		System.out.print("Time Signature (i.e. 4/4, 3/4, 6/8, etc.): ");
 		scanner.nextLine();
 		System.out.println();
 
+		//TODO: check if key is valid
 		System.out.print("Key Signature: ");
 		String key = scanner.nextLine();
 		System.out.println();
