@@ -50,7 +50,7 @@ public class Driver
 		System.out.println("         would be formatted as (C4 1) (C4 2)");
 		System.out.println("Notes: ");
 		System.out.println("      - partial time values (eigth notes in 4/4 represented");
-		System.out.println("        as ([Note][Octave] 0.25) are currently not supported");
+		System.out.println("        as ([Note][Octave] 0.25) are now supported!");
 		System.out.println("      - rests are supported as (X0 [Time Value])");
 		System.out.println("Melody: ");
 		String rawMelody = scanner.nextLine();
@@ -93,7 +93,7 @@ public class Driver
 				curOctave = Integer.parseInt(curRawNote.charAt(1) + "");
 			}
 
-			int curDuration = Integer.parseInt(splitRawMelody[i + 1]);
+			float curDuration = Float.parseFloat(splitRawMelody[i + 1]);
 
 			melody.add(new ChoirNote(curNote, curOctave, curDuration));
 		}
@@ -105,7 +105,7 @@ public class Driver
 		{
 			//System.out.print(i + " " + splitRawChordProg[i] + "\n");
 			String curChord = splitRawChordProg[i];
-			int curDuration = Integer.parseInt(splitRawChordProg[i + 1]);
+			float curDuration = Float.parseFloat(splitRawChordProg[i + 1]);
 			chordProg.add(new Chord(curChord, curDuration, key));
 		}
 

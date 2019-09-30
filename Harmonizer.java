@@ -14,17 +14,6 @@ import java.lang.*;
 						(C 2) (G 2)
 						(Am 2) (G 2)
 						(D 2) (G 2)
-
-	- Frontend takes input
-	- Adds name, time signature, and key to harmonizer
-	- Adds melody to Harmonizer
-	- Adds chord progression to Harmonizer
-	- Harmonizer gens notes needed for each chord in progression
-	- Harmonizer sets melody for Soprano
-	- Harmonizer sets bass notes for Bass
-	- Harmonizer sets notes for Alto and Tenor using Bass and Soprano
-	- Harmonizer prints out each part
-
 */
 
 public class Harmonizer
@@ -51,6 +40,34 @@ public class Harmonizer
 	 "E5", "F5", "Gb5", "G5", "Ab5", "A5"};
 
 	String[] keyChromatic;
+
+	/*ChoirNote[] chromaticWithSharps = new ChoirNote[]
+	{new ChoirNote("E", 2, 0), new ChoirNote("F", 2, 0), new ChoirNote("F#", 2, 0), new ChoirNote("G", 2, 0),
+	new ChoirNote("G#", 2, 0), new ChoirNote("A", 2, 0), new ChoirNote("A#", 2, 0), new ChoirNote("B", 2, 0),
+	new ChoirNote("C", 3, 0), new ChoirNote("C#", 3, 0), new ChoirNote("D", 3, 0), new ChoirNote("D#", 3, 0),
+	new ChoirNote("E", 3, 0), new ChoirNote("F", 3, 0), new ChoirNote("F#", 3, 0), new ChoirNote("G", 3, 0),
+	new ChoirNote("G#", 3, 0), new ChoirNote("A", 3, 0), new ChoirNote("A#", 3, 0), new ChoirNote("B", 3, 0),
+	new ChoirNote("C", 4, 0), new ChoirNote("C#", 4, 0), new ChoirNote("D", 4, 0), new ChoirNote("D#", 4, 0),
+	new ChoirNote("E", 4, 0), new ChoirNote("F", 4, 0), new ChoirNote("F#", 4, 0), new ChoirNote("G", 4, 0),
+	new ChoirNote("G#", 4, 0), new ChoirNote("A", 4, 0), new ChoirNote("A#", 4, 0), new ChoirNote("B", 4, 0),
+	new ChoirNote("C", 5, 0), new ChoirNote("C#", 5, 0), new ChoirNote("D", 5, 0), new ChoirNote("D#", 5, 0),
+	new ChoirNote("E", 5, 0), new ChoirNote("F", 5, 0), new ChoirNote("F#", 5, 0), new ChoirNote("G", 5, 0),
+	new ChoirNote("G#", 5, 0), new ChoirNote("A", 5, 0)};
+
+	ChoirNote[] chromaticWithFlats = new ChoirNote[]
+	{new ChoirNote("E", 2, 0), new ChoirNote("F", 2, 0), new ChoirNote("Gb", 2, 0), new ChoirNote("G", 2, 0),
+	new ChoirNote("Ab", 2, 0), new ChoirNote("A", 2, 0), new ChoirNote("Bb", 2, 0), new ChoirNote("B", 2, 0),
+	new ChoirNote("C", 3, 0), new ChoirNote("Db", 3, 0), new ChoirNote("D", 3, 0), new ChoirNote("Eb", 3, 0),
+	new ChoirNote("E", 3, 0), new ChoirNote("F", 3, 0), new ChoirNote("Gb", 3, 0), new ChoirNote("G", 3, 0),
+	new ChoirNote("Ab", 3, 0), new ChoirNote("A", 3, 0), new ChoirNote("Bb", 3, 0), new ChoirNote("B", 3, 0),
+	new ChoirNote("C", 4, 0), new ChoirNote("Db", 4, 0), new ChoirNote("D", 4, 0), new ChoirNote("Eb", 4, 0),
+	new ChoirNote("E", 4, 0), new ChoirNote("F", 4, 0), new ChoirNote("Gb", 4, 0), new ChoirNote("G", 4, 0),
+	new ChoirNote("Ab", 4, 0), new ChoirNote("A", 4, 0), new ChoirNote("Bb", 4, 0), new ChoirNote("B", 4, 0),
+	new ChoirNote("C", 5, 0), new ChoirNote("Db", 5, 0), new ChoirNote("D", 5, 0), new ChoirNote("Eb", 5, 0),
+	new ChoirNote("E", 5, 0), new ChoirNote("F", 5, 0), new ChoirNote("Gb", 5, 0), new ChoirNote("G", 5, 0),
+	new ChoirNote("Ab", 5, 0), new ChoirNote("A", 5, 0)};
+
+	ChoirNote[] keyChromatic;*/
 
 	ArrayList<Chord> chordProg = new ArrayList<Chord>();
 	ArrayList<ChoirNote> melody = new ArrayList<ChoirNote>();
@@ -138,7 +155,7 @@ public class Harmonizer
 
 				if (note.equals(curChromNote))
 				{
-					bass.add(new ChoirNote(note, temp_chord.duration, curOctave));
+					bass.add(new ChoirNote(note, curOctave, temp_chord.duration));
 					lastNoteInd = j;
 					break;
 				}
@@ -185,7 +202,7 @@ public class Harmonizer
 				//check that suitable note is the same as bass note
 				if (note.equals(curChromNote))
 				{
-					int tempCounts = 0;
+					float tempCounts = 0;
 					while (tempCounts < temp_chord.duration)
 					{
 						//get soprano note for homophonic rhythm
@@ -235,15 +252,11 @@ public class Harmonizer
 		for (int i = 0; i < chordProg.size(); i++)
 		{
 			Chord temp_chord = chordProg.get(i);
-			//String root = temp_chord.root.toString();
-			//String third = temp_chord.third.toString();
-			//String fifth = temp_chord.fifth.toString();
-			//System.out.println("Chord: " + temp_chord.chord + " " + temp_chord.duration);
 
 			//get melody notes within current chord's duration
 			ArrayList<ChoirNote> chordMelody = new ArrayList<ChoirNote>();
-			int duration = temp_chord.duration;
-			int tempCounts = 0;
+			float duration = temp_chord.duration;
+			float tempCounts = 0;
 			while (tempCounts < duration)
 			{
 				ChoirNote tempMelodyNote = melody.get(melodyInd);

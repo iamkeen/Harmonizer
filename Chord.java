@@ -1,7 +1,7 @@
 public class Chord
 {
 	String chord;
-	int duration;
+	float duration;
 	String type;
 	String key;
 	//(A for A major)
@@ -27,7 +27,7 @@ public class Chord
 	String[] keyNotes;
 	
 
-	public Chord(String chord, int duration, String key)
+	public Chord(String chord, float duration, String key)
 	{
 		this.chord = chord;
 		this.duration = duration;

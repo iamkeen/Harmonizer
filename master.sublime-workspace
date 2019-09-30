@@ -547,7 +547,8 @@
 			"file": "Harmonizer.java",
 			"settings":
 			{
-				"buffer_size": 12900,
+				"buffer_size": 14659,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -775,7 +776,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -848,8 +849,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								3906,
+								3906
 							]
 						],
 						"settings":
@@ -858,10 +859,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1220.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -870,15 +871,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12900,
+						"buffer_size": 14659,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								9639,
+								9639
 							]
 						],
 						"settings":
@@ -887,10 +888,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6082.28571429,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -906,8 +907,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								136,
+								136
 							]
 						],
 						"settings":
@@ -918,7 +919,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
