@@ -127,9 +127,7 @@ public class Driver
 		}
 		System.out.println();
 
-		//bass generation
 		System.out.println("Bass:");
-		//h.genBassHomophonic();
 		for (int i = 0; i < h.bass.size(); i++)
 		{
 			ChoirNote temp = h.bass.get(i);
@@ -137,8 +135,6 @@ public class Driver
 		}
 		System.out.println();
 
-		//tenor and alto generation
-		//h.genMiddleVoicesHomophonic();
 		System.out.println("Tenor:");
 		for (int i = 0; i < h.tenor.size(); i++)
 		{
@@ -155,15 +151,45 @@ public class Driver
 		}
 		System.out.println();
 
-		//soprano generation
 		System.out.println("Soprano:");
-		//h.genSop();
 		for (int i = 0; i < h.soprano.size(); i++)
 		{
 			ChoirNote temp = h.soprano.get(i);
 			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
 		}
 		System.out.println();
+
+		/*h.genNonhomophonic();
+
+		for (int i = 0; i < h.chordProg.size(); i++)
+		{
+			Chord temp = h.chordProg.get(i);
+			System.out.print("Chord: " + temp.chord + "\n" + 
+							//"Type: " + temp.type + "\n" +
+							"Duration: " + temp.duration + "\n" + 
+							"Bass Note: " + temp.bassNote.toString() + "\n" + 
+							"Root: " + temp.root.toString() + "\n" +
+							"Third: " + temp.third.toString() + "\n" +
+							"Fifth: " + temp.fifth.toString() + "\n\n");
+							//);
+		}
+
+		System.out.println();
+		System.out.println("Soprano:");
+		for (int i = 0; i < h.soprano.size(); i++)
+		{
+			ChoirNote temp = h.soprano.get(i);
+			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
+		}
+		System.out.println();
+
+		System.out.println("Bass:");
+		for (int i = 0; i < h.bass.size(); i++)
+		{
+			ChoirNote temp = h.bass.get(i);
+			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
+		}
+		System.out.println();*/
 	}
 }
 

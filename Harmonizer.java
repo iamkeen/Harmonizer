@@ -16,6 +16,17 @@ import java.lang.*;
 						(D 2) (G 2)
 */
 
+/*
+	https://stackoverflow.com/questions/3850688/reading-midi-files-in-java
+	http://automatic-pilot.com/midifile.html
+	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/spi/MidiFileReader.html
+	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/Sequence.html
+	https://www.programcreek.com/java-api-examples/?class=javax.sound.midi.Sequence&method=PPQ
+	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/Track.html
+	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/MidiEvent.html
+	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/MidiMessage.html
+*/
+
 public class Harmonizer
 {
 	String name;
@@ -27,7 +38,7 @@ public class Harmonizer
 
 	//use indexOf to check for octave rules
 	
-	String[] chromaticWithSharps = new String[]
+	/*String[] chromaticWithSharps = new String[]
 	{"E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2", "C3", "C#3", "D3", "D#3",
 	 "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3", "C4", "C#4", "D4", "D#4",
 	 "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4", "C5", "C#5", "D5", "D#5",
@@ -39,9 +50,9 @@ public class Harmonizer
 	 "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4", "C5", "Db5", "D5", "Eb5",
 	 "E5", "F5", "Gb5", "G5", "Ab5", "A5"};
 
-	String[] keyChromatic;
+	String[] keyChromatic;*/
 
-	/*ChoirNote[] chromaticWithSharps = new ChoirNote[]
+	ChoirNote[] chromaticWithSharps = new ChoirNote[]
 	{new ChoirNote("E", 2, 0), new ChoirNote("F", 2, 0), new ChoirNote("F#", 2, 0), new ChoirNote("G", 2, 0),
 	new ChoirNote("G#", 2, 0), new ChoirNote("A", 2, 0), new ChoirNote("A#", 2, 0), new ChoirNote("B", 2, 0),
 	new ChoirNote("C", 3, 0), new ChoirNote("C#", 3, 0), new ChoirNote("D", 3, 0), new ChoirNote("D#", 3, 0),
@@ -67,7 +78,7 @@ public class Harmonizer
 	new ChoirNote("E", 5, 0), new ChoirNote("F", 5, 0), new ChoirNote("Gb", 5, 0), new ChoirNote("G", 5, 0),
 	new ChoirNote("Ab", 5, 0), new ChoirNote("A", 5, 0)};
 
-	ChoirNote[] keyChromatic;*/
+	ChoirNote[] keyChromatic;
 
 	ArrayList<Chord> chordProg = new ArrayList<Chord>();
 	ArrayList<ChoirNote> melody = new ArrayList<ChoirNote>();
@@ -117,6 +128,12 @@ public class Harmonizer
 		//this.finalizeAllParts();
 	}
 
+	public void genNonhomophonic()
+	{
+		this.genSop();
+		this.genBass();
+	}
+
 	private void genSop()
 	{
 		soprano = melody;
@@ -125,10 +142,10 @@ public class Harmonizer
 	private void genBass()
 	{
 		//bass range is E2 to E4
-		int botOfRange = Arrays.asList(keyChromatic).indexOf("E2");
-		int topOfRange = Arrays.asList(keyChromatic).indexOf("E4");
+		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 2, 0));
+		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 4, 0));
 		int lastNoteInd = 0;
-		String[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
+		ChoirNote[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
 
 		for (int i = 0; i < chordProg.size(); i++)
 		{
@@ -138,24 +155,13 @@ public class Harmonizer
 			//TODO: handle jumps over M6 (9 indexes)
 			for (int j = 0; j < bassRange.length; j++)
 			{
-				String cur = bassRange[j];
+				ChoirNote cur = bassRange[j];
 				String curChromNote;
 				int curOctave;
 
-				if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
+				if (note.equals(cur.note))
 				{
-					curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-					curOctave = Integer.parseInt(cur.charAt(2) + "");
-				}
-				else
-				{
-					curChromNote = cur.charAt(0) + "";
-					curOctave = Integer.parseInt(cur.charAt(1) + "");
-				}
-
-				if (note.equals(curChromNote))
-				{
-					bass.add(new ChoirNote(note, curOctave, temp_chord.duration));
+					bass.add(new ChoirNote(cur.note, cur.octave, temp_chord.duration));
 					lastNoteInd = j;
 					break;
 				}
@@ -167,11 +173,11 @@ public class Harmonizer
 	private void genBassHomophonic()
 	{
 		//bass range is E2 to E4
-		int botOfRange = Arrays.asList(keyChromatic).indexOf("E2");
-		int topOfRange = Arrays.asList(keyChromatic).indexOf("E4");
+		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 2, 0));
+		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 4, 0));
 		int lastNoteInd = 0;
 		int melodyInd = 0;
-		String[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
+		ChoirNote[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
 
 		//go through chord progression
 		for (int i = 0; i < chordProg.size(); i++)
@@ -184,23 +190,12 @@ public class Harmonizer
 			//find suitable bass note
 			for (int j = 0; j < bassRange.length; j++)
 			{
-				String cur = bassRange[j];
+				ChoirNote cur = bassRange[j];
 				String curChromNote;
 				int curOctave;
 
-				if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
-				{
-					curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-					curOctave = Integer.parseInt(cur.charAt(2) + "");
-				}
-				else
-				{
-					curChromNote = cur.charAt(0) + "";
-					curOctave = Integer.parseInt(cur.charAt(1) + "");
-				}
-
 				//check that suitable note is the same as bass note
-				if (note.equals(curChromNote))
+				if (note.equals(cur.note))
 				{
 					float tempCounts = 0;
 					while (tempCounts < temp_chord.duration)
@@ -217,7 +212,7 @@ public class Harmonizer
 						}
 						else
 						{
-							bass.add(new ChoirNote(note, curOctave, tempMelodyNote.duration));
+							bass.add(new ChoirNote(cur.note, cur.octave, tempMelodyNote.duration));
 						}
 						lastNoteInd = j;
 					}
@@ -231,16 +226,16 @@ public class Harmonizer
 	private void genMiddleVoicesHomophonic()
 	{
 		//tenor range is C3 to C5
-		int botOfRange = Arrays.asList(keyChromatic).indexOf("C3");
-		int topOfRange = Arrays.asList(keyChromatic).indexOf("C5");
+		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("C", 3, 0));
+		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("C", 5, 0));
 		int tenorLastNoteInd = 0;
-		String[] tenorRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);	
+		ChoirNote[] tenorRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);	
 
 		//alto range is F3 to F5
-		botOfRange = Arrays.asList(keyChromatic).indexOf("F3");
-		topOfRange = Arrays.asList(keyChromatic).indexOf("F5");
+		botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("F", 3, 0));
+		topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("F", 5, 0));
 		int altoLastNoteInd = 0;
-		String[] altoRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
+		ChoirNote[] altoRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
 
 		//for iterating through melody to find melody within chords
 		int melodyInd = 0;
@@ -301,24 +296,11 @@ public class Harmonizer
 							{
 								for (int l = 0; l < tenorRange.length; l++)
 								{
-									String cur = tenorRange[l];
-									String curChromNote;
-									int curOctave;
+									ChoirNote cur = tenorRange[l];
 
-									if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
+									if (missingNote.equals(cur.note))
 									{
-										curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-										curOctave = Integer.parseInt(cur.charAt(2) + "");
-									}
-									else
-									{
-										curChromNote = cur.charAt(0) + "";
-										curOctave = Integer.parseInt(cur.charAt(1) + "");
-									}
-
-									if (missingNote.equals(curChromNote))
-									{
-											tenor.add(new ChoirNote(missingNote, curOctave, chordMelody.get(j).duration));
+											tenor.add(new ChoirNote(missingNote, cur.octave, chordMelody.get(j).duration));
 											//lastNoteInd = k;
 											tenorSet = true;
 											break;
@@ -329,24 +311,11 @@ public class Harmonizer
 							{
 									for (int l = 0; l < altoRange.length; l++)
 									{
-										String cur = altoRange[l];
-										String curChromNote;
-										int curOctave;
+										ChoirNote cur = altoRange[l];
 
-										if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
+										if (missingNote.equals(cur.note))
 										{
-											curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-											curOctave = Integer.parseInt(cur.charAt(2) + "");
-										}
-										else
-										{
-											curChromNote = cur.charAt(0) + "";
-											curOctave = Integer.parseInt(cur.charAt(1) + "");
-										}
-
-										if (missingNote.equals(curChromNote))
-										{
-												alto.add(new ChoirNote(missingNote, curOctave, chordMelody.get(j).duration));
+												alto.add(new ChoirNote(missingNote, cur.octave, chordMelody.get(j).duration));
 												//lastNoteInd = l;
 												altoSet = true;
 												break;
@@ -362,33 +331,13 @@ public class Harmonizer
 					else
 					{
 						String missingNote = missingNotes.get(0);
-
-						//TODO:
-						//- handle jumps
-						//- check if alto is in same octave as soprano
-						//- check if alto is lower than soprano
-						//- check if tenor is in same octave as alto
-						//- check if tenor is lower than alto
 						for (int k = 0; k < tenorRange.length; k++)
 						{
-							String cur = tenorRange[k];
-							String curChromNote;
-							int curOctave;
+							ChoirNote cur = tenorRange[k];
 
-							if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
+							if (missingNote.equals(cur.note))
 							{
-								curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-								curOctave = Integer.parseInt(cur.charAt(2) + "");
-							}
-							else
-							{
-								curChromNote = cur.charAt(0) + "";
-								curOctave = Integer.parseInt(cur.charAt(1) + "");
-							}
-
-							if (missingNote.equals(curChromNote))
-							{
-									tenor.add(new ChoirNote(missingNote, curOctave, chordMelody.get(j).duration));
+									tenor.add(new ChoirNote(missingNote, cur.octave, chordMelody.get(j).duration));
 									//lastNoteInd = k;
 									break;
 							}
@@ -396,24 +345,11 @@ public class Harmonizer
 
 						for (int l = 0; l < altoRange.length; l++)
 						{
-							String cur = altoRange[l];
-							String curChromNote;
-							int curOctave;
+							ChoirNote cur = altoRange[l];
 
-							if (cur.charAt(1) == '#' || cur.charAt(1) == 'b') 
+							if (missingNote.equals(cur.note))
 							{
-								curChromNote = (cur.charAt(0) + "" + cur.charAt(1));
-								curOctave = Integer.parseInt(cur.charAt(2) + "");
-							}
-							else
-							{
-								curChromNote = cur.charAt(0) + "";
-								curOctave = Integer.parseInt(cur.charAt(1) + "");
-							}
-
-							if (missingNote.equals(curChromNote))
-							{
-									alto.add(new ChoirNote(missingNote, curOctave, chordMelody.get(j).duration));
+									alto.add(new ChoirNote(missingNote, cur.octave, chordMelody.get(j).duration));
 									//lastNoteInd = l;
 									break;
 							}
@@ -461,8 +397,15 @@ public class Harmonizer
 
 	private void finalizeAllParts()
 	{
-
+		//TODO:
+		//- handle jumps
+		//- check if alto is in same octave as soprano
+		//- check if alto is lower than soprano
+		//- check if tenor is in same octave as alto
+		//- check if tenor is lower than alto
 	}
+
+	
 
 	/*public void genTenor()
 	{
