@@ -33,7 +33,7 @@ public class Driver
 		String name = scanner.nextLine();
 		System.out.println();
 
-		//check if time signature is valid
+		//TODO: check if time signature is valid
 		System.out.print("Time Signature (i.e. 4/4, 3/4, 6/8, etc.): ");
 		scanner.nextLine();
 		System.out.println();
@@ -69,6 +69,10 @@ public class Driver
 		System.out.println("Chord Progression:");
 		String rawChordProg = scanner.nextLine();
 		System.out.println();
+
+		System.out.println("Homophonic[1] or non-homophonic[2]?");
+		int mode = Integer.parseInt(scanner.nextLine());
+		System.out.println();		
 
 		String[] splitRawMelody = rawMelody.substring(1).split("\\(|\\s|\\)\\s\\(|\\)", 0);
 		String[] splitRawChordProg = rawChordProg.substring(1).split("\\(|\\s|\\)\\s\\(|\\)", 0);
@@ -110,20 +114,25 @@ public class Driver
 		}
 
 		Harmonizer h = new Harmonizer(name, melody, chordProg, key);
-		h.genHomophonic();
+		if (mode == 1)
+		{	
+			h.genHomophonic();
+		}
+		else if (mode == 2)
+		{
+			h.genNonhomophonic();
+		}
 
 		//check chord generation
 		for (int i = 0; i < h.chordProg.size(); i++)
 		{
 			Chord temp = h.chordProg.get(i);
 			System.out.print("Chord: " + temp.chord + "\n" + 
-							//"Type: " + temp.type + "\n" +
 							"Duration: " + temp.duration + "\n" + 
 							"Bass Note: " + temp.bassNote.toString() + "\n" + 
 							"Root: " + temp.root.toString() + "\n" +
 							"Third: " + temp.third.toString() + "\n" +
 							"Fifth: " + temp.fifth.toString() + "\n\n");
-							//);
 		}
 		System.out.println();
 
@@ -158,38 +167,6 @@ public class Driver
 			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
 		}
 		System.out.println();
-
-		/*h.genNonhomophonic();
-
-		for (int i = 0; i < h.chordProg.size(); i++)
-		{
-			Chord temp = h.chordProg.get(i);
-			System.out.print("Chord: " + temp.chord + "\n" + 
-							//"Type: " + temp.type + "\n" +
-							"Duration: " + temp.duration + "\n" + 
-							"Bass Note: " + temp.bassNote.toString() + "\n" + 
-							"Root: " + temp.root.toString() + "\n" +
-							"Third: " + temp.third.toString() + "\n" +
-							"Fifth: " + temp.fifth.toString() + "\n\n");
-							//);
-		}
-
-		System.out.println();
-		System.out.println("Soprano:");
-		for (int i = 0; i < h.soprano.size(); i++)
-		{
-			ChoirNote temp = h.soprano.get(i);
-			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
-		}
-		System.out.println();
-
-		System.out.println("Bass:");
-		for (int i = 0; i < h.bass.size(); i++)
-		{
-			ChoirNote temp = h.bass.get(i);
-			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
-		}
-		System.out.println();*/
 	}
 }
 

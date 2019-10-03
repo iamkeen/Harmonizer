@@ -6,14 +6,8 @@ import java.lang.*;
 	Twinkle Twinkle Little Star
 	Time Signature: 4/4
 	Key Signature: G
-	Melody: (G4 1) (G4 1) (D5 1) (D5 1) 
-			(E5 1) (E5 1) (D5 2) 
-			(C5 1) (C5 1) (B4 1) (B4 1)
-			(A4 1) (A4 1) (G4 2)
-	Chord Progression: 	(G 4) 
-						(C 2) (G 2)
-						(Am 2) (G 2)
-						(D 2) (G 2)
+	Melody: (G4 1) (G4 1) (D5 1) (D5 1) (E5 1) (E5 1) (D5 2) (C5 1) (C5 1) (B4 1) (B4 1) (A4 1) (A4 1) (G4 2)
+	Chord Progression: 	(G 4) (C 2) (G 2) (Am 2) (G 2) (D 2) (G 2)
 */
 
 /*
@@ -25,6 +19,7 @@ import java.lang.*;
 	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/Track.html
 	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/MidiEvent.html
 	https://docs.oracle.com/javase/7/docs/api/javax/sound/midi/MidiMessage.html
+	https://docs.oracle.com/javase/tutorial/sound/SPI-providing-MIDI.html
 */
 
 public class Harmonizer
@@ -37,20 +32,6 @@ public class Harmonizer
 	*/
 
 	//use indexOf to check for octave rules
-	
-	/*String[] chromaticWithSharps = new String[]
-	{"E2", "F2", "F#2", "G2", "G#2", "A2", "A#2", "B2", "C3", "C#3", "D3", "D#3",
-	 "E3", "F3", "F#3", "G3", "G#3", "A3", "A#3", "B3", "C4", "C#4", "D4", "D#4",
-	 "E4", "F4", "F#4", "G4", "G#4", "A4", "A#4", "B4", "C5", "C#5", "D5", "D#5",
-	 "E5", "F5", "F#5", "G5", "G#5", "A5"};
-
-	String[] chromaticWithFlats = new String[]
-	{"E2", "F2", "Gb2", "G2", "Ab2", "A2", "Bb2", "B2", "C3", "Db3", "D3", "Eb3",
-	 "E3", "F3", "Gb3", "G3", "Ab3", "A3", "Bb3", "B3", "C4", "Db4", "D4", "Eb4",
-	 "E4", "F4", "Gb4", "G4", "Ab4", "A4", "Bb4", "B4", "C5", "Db5", "D5", "Eb5",
-	 "E5", "F5", "Gb5", "G5", "Ab5", "A5"};
-
-	String[] keyChromatic;*/
 
 	ChoirNote[] chromaticWithSharps = new ChoirNote[]
 	{new ChoirNote("E", 2, 0), new ChoirNote("F", 2, 0), new ChoirNote("F#", 2, 0), new ChoirNote("G", 2, 0),
@@ -120,55 +101,24 @@ public class Harmonizer
 		}
 	}
 
+	/*
+		==================================================================================================================================
+		========================================================HOMOPHONIC================================================================
+		==================================================================================================================================
+	*/
+
 	public void genHomophonic()
 	{
 		this.genSop();
 		this.genBassHomophonic();
 		this.genMiddleVoicesHomophonic();
-		//this.finalizeAllParts();
-	}
-
-	public void genNonhomophonic()
-	{
-		this.genSop();
-		this.genBass();
+		this.enforceRulesHomophonic();
 	}
 
 	private void genSop()
 	{
 		soprano = melody;
 	}
-
-	private void genBass()
-	{
-		//bass range is E2 to E4
-		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 2, 0));
-		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 4, 0));
-		int lastNoteInd = 0;
-		ChoirNote[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
-
-		for (int i = 0; i < chordProg.size(); i++)
-		{
-			Chord temp_chord = chordProg.get(i);
-			String note = temp_chord.bassNote.toString();
-
-			//TODO: handle jumps over M6 (9 indexes)
-			for (int j = 0; j < bassRange.length; j++)
-			{
-				ChoirNote cur = bassRange[j];
-				String curChromNote;
-				int curOctave;
-
-				if (note.equals(cur.note))
-				{
-					bass.add(new ChoirNote(cur.note, cur.octave, temp_chord.duration));
-					lastNoteInd = j;
-					break;
-				}
-			}
-		}
-	}
-
 
 	private void genBassHomophonic()
 	{
@@ -362,40 +312,7 @@ public class Harmonizer
 		}
 	}
 
-	private ArrayList<String> getMissingNotes(String bassNote, String sopranoNote, Chord chord)
-	{
-		ArrayList<String> missingNotes = new ArrayList<String>();
-		String root = chord.root.toString();
-		String third = chord.third.toString();
-		String fifth = chord.fifth.toString();
-
-		if (!(bassNote.equals(root)))
-		{
-			if (!(sopranoNote.equals(root)))
-			{
-				missingNotes.add(root);
-			}
-		}
-		if (!(bassNote.equals(third)))
-		{
-			if (!(sopranoNote.equals(third)))
-			{
-				missingNotes.add(third);
-			}
-		}
-
-		if (!(bassNote.equals(fifth)))
-		{
-			if (!(sopranoNote.equals(fifth)))
-			{
-				missingNotes.add(fifth);
-			}
-		}
-
-		return missingNotes;
-	}
-
-	private void finalizeAllParts()
+	private void enforceRulesHomophonic()
 	{
 		//TODO:
 		//- handle jumps
@@ -403,27 +320,222 @@ public class Harmonizer
 		//- check if alto is lower than soprano
 		//- check if tenor is in same octave as alto
 		//- check if tenor is lower than alto
+		//- check if tenor is higher than bass
 	}
 
-	
 
-	/*public void genTenor()
+	/*
+		==================================================================================================================================
+		=====================================================NONHOMOPHONIC================================================================
+		==================================================================================================================================
+	*/
+
+	public void genNonhomophonic()
+	{
+		this.genSop();
+		this.genBass();
+		this.genMiddleVoices();
+	}
+
+	private void genBass()
+	{
+		//bass range is E2 to E4
+		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 2, 0));
+		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("E", 4, 0));
+		int lastNoteInd = 0;
+		ChoirNote[] bassRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
+
+		for (int i = 0; i < chordProg.size(); i++)
+		{
+			Chord temp_chord = chordProg.get(i);
+			String note = temp_chord.bassNote.toString();
+
+			//TODO: handle jumps over M6 (9 indexes)
+			for (int j = 0; j < bassRange.length; j++)
+			{
+				ChoirNote cur = bassRange[j];
+				String curChromNote;
+				int curOctave;
+
+				if (note.equals(cur.note))
+				{
+					bass.add(new ChoirNote(cur.note, cur.octave, temp_chord.duration));
+					lastNoteInd = j;
+					break;
+				}
+			}
+		}
+	}
+
+	private void genMiddleVoices()
 	{
 		//tenor range is C3 to C5
-		int botOfRange = Arrays.asList(keyChromatic).indexOf("C3");
-		int topOfRange = Arrays.asList(keyChromatic).indexOf("C5");
-		int lastNoteInd = 0;
-		String[] tenorRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);	
+		int botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("C", 3, 0));
+		int topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("C", 5, 0));
+		int tenorLastNoteInd = 0;
+		ChoirNote[] tenorRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);	
+
+		//alto range is F3 to F5
+		botOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("F", 3, 0));
+		topOfRange = Arrays.asList(keyChromatic).indexOf(new ChoirNote("F", 5, 0));
+		int altoLastNoteInd = 0;
+		ChoirNote[] altoRange = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);
+
+		int melodyInd = 0;
+
+		//iterate through each chord
+		for (int i = 0; i < chordProg.size(); i++)
+		{
+			Chord temp_chord = chordProg.get(i);
+
+			//TODO: what if melody is rest?
+			//get first melody note in current chord
+			float duration = temp_chord.duration;
+			float tempCounts = 0;
+			while (tempCounts < duration && melodyInd < melody.size() - 1)
+			{
+				tempCounts += melody.get(melodyInd).duration;
+				melodyInd++;
+			}
+
+			//find missing notes in current chord
+			ArrayList<String> missingNotes = getMissingNotes(bass.get(i).note.toString(), 
+															soprano.get(melodyInd).note.toString(), 
+															temp_chord);
+
+			//fill in missing notes with middle voices
+			if (missingNotes.size() > 1)
+			{
+				boolean tenorSet = false;
+				boolean altoSet = false;
+
+				for (int k = 0; k < missingNotes.size(); k++)
+				{
+					String missingNote = missingNotes.get(k);
+
+					if (!tenorSet)
+					{
+						for (int l = 0; l < tenorRange.length; l++)
+						{
+							ChoirNote cur = tenorRange[l];
+
+							if (missingNote.equals(cur.note))
+							{
+									tenor.add(new ChoirNote(missingNote, cur.octave, temp_chord.duration));
+									//lastNoteInd = k;
+									tenorSet = true;
+									break;
+							}
+						}
+					}
+					else if (!altoSet)
+					{
+							for (int l = 0; l < altoRange.length; l++)
+							{
+								ChoirNote cur = altoRange[l];
+
+								if (missingNote.equals(cur.note))
+								{
+										alto.add(new ChoirNote(missingNote, cur.octave, temp_chord.duration));
+										//lastNoteInd = l;
+										altoSet = true;
+										break;
+								}
+							}
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+			else
+			{
+				String missingNote = missingNotes.get(0);
+				for (int k = 0; k < tenorRange.length; k++)
+				{
+					ChoirNote cur = tenorRange[k];
+
+					if (missingNote.equals(cur.note))
+					{
+							tenor.add(new ChoirNote(missingNote, cur.octave, temp_chord.duration));
+							//lastNoteInd = k;
+							break;
+					}
+				}
+
+				for (int l = 0; l < altoRange.length; l++)
+				{
+					ChoirNote cur = altoRange[l];
+
+					if (missingNote.equals(cur.note))
+					{
+							alto.add(new ChoirNote(missingNote, cur.octave, temp_chord.duration));
+							//lastNoteInd = l;
+							break;
+					}
+				}
+			}
+		}
 	}
 
-	public void genAlto()
+
+	/*
+		==================================================================================================================================
+		============================================================HELPER================================================================
+		==================================================================================================================================
+	*/	
+	private ArrayList<String> getMissingNotes(String bassNote, String sopranoNote, Chord chord)
 	{
-		//alto range is F3 to F5
-		int botOfRange = Arrays.asList(keyChromatic).indexOf("F3");
-		int topOfRange = Arrays.asList(keyChromatic).indexOf("F5");
-		int lastNoteInd = 0;
-		String[] alto = Arrays.copyOfRange(keyChromatic, botOfRange, topOfRange);	
-	}*/
+		ArrayList<String> missingNotes = new ArrayList<String>();
+		String root = chord.root.toString();
+		String third = chord.third.toString();
+		String fifth = chord.fifth.toString();
+
+		if (sopranoNote.equals("X"))
+		{
+			if (!(bassNote.equals(root)))
+			{
+				missingNotes.add(root);
+			}
+			if (!(bassNote.equals(third)))
+			{
+				missingNotes.add(third);
+			}
+
+			if (!(bassNote.equals(fifth)))
+			{
+				missingNotes.add(fifth);
+			}
+		}
+		else
+		{
+			if (!(bassNote.equals(root)))
+			{
+				if (!(sopranoNote.equals(root)))
+				{
+					missingNotes.add(root);
+				}
+			}
+			if (!(bassNote.equals(third)))
+			{
+				if (!(sopranoNote.equals(third)))
+				{
+					missingNotes.add(third);
+				}
+			}
+
+			if (!(bassNote.equals(fifth)))
+			{
+				if (!(sopranoNote.equals(fifth)))
+				{
+					missingNotes.add(fifth);
+				}
+			}
+		}
+
+		return missingNotes;
+	}
 }
 
 

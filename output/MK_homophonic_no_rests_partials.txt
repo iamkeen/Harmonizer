@@ -1,0 +1,107 @@
+Time Signature (i.e. 4/4, 3/4, 6/8, etc.): 4/4
+
+Key Signature: C
+
+Melody must be inputted in the following format:
+([Note1][Octave] [Time Value]) ([Note2][Octave] [Time Value]) ...
+Example: a melody starting with a middle C quarter note and
+         a middle C half note in the time signature of 4/4
+         would be formatted as (C4 1) (C4 2)
+Notes:
+      - partial time values (eigth notes in 4/4 represented
+        as ([Note][Octave] 0.25) are now supported!
+      - rests are supported as (X0 [Time Value])
+Melody:
+(C4 0.25) (D4 0.25) (E4 0.5) (A4 1) (F4 0.5) (F#4 0.5) (G4 1) (C5 4)
+
+Chord Progression must be inputted in the following format:
+([Chord1][Time Value]) ([Chord2][Time Value]) ...
+The following chord types are accepted:
+        -major (i.e. (G 4))
+        -minor (i.e. (Em 2))
+        -augmented (i.e. (Caug 1))
+        -diminished (i.e. (F#dim 1))
+Example: a chord progression starting with a G major for 4
+         counts and an E minor for 2 counts in the time
+         signature of 4/4 would be formatted as (G 4) (Em 2)
+Chord Progression:
+(C 1) (Am 1) (F 1) (G 1) (C 4)
+
+Homophonic[1] or non-homophonic[2]?
+1
+
+Chord: C
+Duration: 1.0
+Bass Note: C
+Root: C
+Third: E
+Fifth: G
+
+Chord: Am
+Duration: 1.0
+Bass Note: A
+Root: A
+Third: C
+Fifth: E
+
+Chord: F
+Duration: 1.0
+Bass Note: F
+Root: F
+Third: A
+Fifth: C
+
+Chord: G
+Duration: 1.0
+Bass Note: G
+Root: G
+Third: B
+Fifth: D
+
+Chord: C
+Duration: 4.0
+Bass Note: C
+Root: C
+Third: E
+Fifth: G
+
+
+Bass:
+C3 0.25
+C3 0.25
+C3 0.5
+A2 1.0
+F2 0.5
+F2 0.5
+G2 1.0
+C3 4.0
+
+Tenor:
+E3 0.25
+E3 0.25
+G3 0.5
+C3 1.0
+A3 0.5
+A3 0.5
+B3 1.0
+E3 4.0
+
+Alto:
+G3 0.25
+G3 0.25
+G3 0.5
+E4 1.0
+C4 0.5
+C4 0.5
+D4 1.0
+G3 4.0
+
+Soprano:
+C4 0.25
+D4 0.25
+E4 0.5
+A4 1.0
+F4 0.5
+F#4 0.5
+G4 1.0
+C5 4.0
