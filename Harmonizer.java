@@ -225,12 +225,6 @@ public class Harmonizer
 					ArrayList<String> missingNotes = getMissingNotes(bass.get(melodyInd2).note.toString(), 
 																	soprano.get(melodyInd2).note.toString(), 
 																	temp_chord);
-					/*System.out.print("Missing notes: ");
-					for (int l = 0; l < missingNotes.size(); l++)
-					{
-						System.out.print(missingNotes.get(l) + "\t");
-					}
-					System.out.println();*/
 
 					//fill in missing notes with middle voices
 					if (missingNotes.size() > 1)
@@ -297,11 +291,12 @@ public class Harmonizer
 						{
 							ChoirNote cur = altoRange[l];
 
-							if (missingNote.equals(cur.note))
+							if (bass.get(melodyInd2).note.equals(cur.note))
 							{
-									alto.add(new ChoirNote(missingNote, cur.octave, chordMelody.get(j).duration));
-									//lastNoteInd = l;
-									break;
+								//doubles root
+								alto.add(new ChoirNote(bass.get(melodyInd2).note, cur.octave, chordMelody.get(j).duration));
+								//lastNoteInd = l;
+								break;
 							}
 						}
 					}
@@ -314,6 +309,7 @@ public class Harmonizer
 
 	private void enforceRulesHomophonic()
 	{
+		this.enforceOctaveRuleHomophonic();
 		//TODO:
 		//- handle jumps
 		//- check if alto is in same octave as soprano
@@ -321,6 +317,38 @@ public class Harmonizer
 		//- check if tenor is in same octave as alto
 		//- check if tenor is lower than alto
 		//- check if tenor is higher than bass
+	}
+
+	private void enforceOctaveRuleHomophonic()
+	{
+		for (int i = 0; i < melody.size(); i++)
+		{	
+			float duration = soprano.get(i).duration;
+			
+			ChoirNote sNote = new ChoirNote(soprano.get(i).note, soprano.get(i).octave, 0);
+			int sNoteInd = Arrays.asList(keyChromatic).indexOf(sNote);
+
+			ChoirNote aNote = new ChoirNote(alto.get(i).note, alto.get(i).octave, 0);
+			int aNoteInd = Arrays.asList(keyChromatic).indexOf(aNote);
+
+			ChoirNote tNote = new ChoirNote(tenor.get(i).note, tenor.get(i).octave, 0);
+			int tNoteInd = Arrays.asList(keyChromatic).indexOf(tNote);
+			
+			ChoirNote bNote = new ChoirNote(bass.get(i).note, bass.get(i).octave, 0);
+			int bNoteInd = Arrays.asList(keyChromatic).indexOf(bNote);
+
+			//check if alto is the correct octave
+			if (Math.abs(sNoteInd - aNoteInd) > 13)
+			{
+				alto.set(i, (new ChoirNote(alto.get(i).note, alto.get(i).octave + 1, duration)));
+				aNoteInd = Arrays.asList(keyChromatic).indexOf(new ChoirNote(alto.get(i).note, alto.get(i).octave, 0));
+			}
+
+			if (Math.abs(aNoteInd - tNoteInd) > 13)
+			{
+				tenor.set(i, (new ChoirNote(tenor.get(i).note, tenor.get(i).octave + 1, duration)));
+			}
+		}
 	}
 
 
@@ -468,15 +496,27 @@ public class Harmonizer
 				{
 					ChoirNote cur = altoRange[l];
 
-					if (missingNote.equals(cur.note))
+					if (bass.get(i).note.equals(cur.note))
 					{
-							alto.add(new ChoirNote(missingNote, cur.octave, temp_chord.duration));
+							alto.add(new ChoirNote(bass.get(i).note, cur.octave, temp_chord.duration));
 							//lastNoteInd = l;
 							break;
 					}
 				}
 			}
 		}
+	}
+
+	private void enforceRules()
+	{
+		this.enforceOctaveRule();
+		//TODO:
+		//- handle jumps
+		//- check if alto is in same octave as soprano
+		//- check if alto is lower than soprano
+		//- check if tenor is in same octave as alto
+		//- check if tenor is lower than alto
+		//- check if tenor is higher than bass
 	}
 
 
