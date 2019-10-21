@@ -1,7 +1,5 @@
 public class ChoirNote extends Note
 {
-	//TODO: add support for dotted and smaller valued time values
-	//ex. 0.5 duration as en eighth note in 4/4
 	float duration;
 	int octave;
 
@@ -29,8 +27,8 @@ public class ChoirNote extends Note
 		ChoirNote temp = (ChoirNote)o;
 
 		if (super.note.equals(temp.note) && 
-			this.octave == temp.octave && 
-			this.duration == this.duration)
+			this.octave == temp.octave)
+			//&& this.duration == this.duration)
 		{
 			return true;
 		}

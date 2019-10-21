@@ -2,6 +2,7 @@ public class Chord
 {
 	String chord;
 	float duration;
+	String inversion;
 	String type;
 	String key;
 	//(A for A major)
@@ -65,7 +66,14 @@ public class Chord
 		if (this.chord.contains("/"))
 		{
 			int i = this.chord.indexOf("/");
-			this.bassNote = new Note(this.chord.charAt(i + 1) + "");
+			if (this.chord.charAt(i + 2) == '#' || this.chord.charAt(i + 2) == 'b')
+			{
+				this.bassNote = new Note(this.chord.charAt(i + 1) + "" + this.chord.charAt(i + 2));
+			}
+			else
+			{
+				this.bassNote = new Note(this.chord.charAt(i + 1) + "");
+			}
 		}
 		else
 		{
@@ -120,6 +128,23 @@ public class Chord
 		{
 			this.third = new Note(keyNotes[iOfRoot + 3]);
 			this.fifth = new Note(keyNotes[iOfRoot + 6]);
+		}
+
+
+		if (bassNote.equals(third))
+		{
+			inversion = "first";
+			//double soprano
+		}
+		else if (bassNote.equals(fifth))
+		{
+			inversion = "second";
+			//double fifth
+		}
+		else
+		{
+			inversion = "none";
+			//double root
 		}
 	}
 }
