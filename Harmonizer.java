@@ -369,40 +369,64 @@ public class Harmonizer{
 			//alt G3 -> A3
 
 			if ((sNote1Ind - aNote1Ind == 7) && (sNote2Ind - aNote2Ind == 7) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel fifth (SA) at " + i);
+				System.out.println("Parallel fifth (SA) at " + (i+1) + " and " + (i+2));
 			}
 			if ((sNote1Ind - aNote1Ind == 12) && (sNote2Ind - aNote2Ind == 12) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel octave (SA) at " + i);
+				System.out.println("Parallel octave (SA) at " + (i+1) + " and " + (i+2));
 			}
-			if ((sNote1Ind - tNote1Ind == 7) && (sNote2Ind - tNote2Ind == 7) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel fifth (ST) at " + i);
+			if (((sNote1Ind - tNote1Ind == 7) && (sNote2Ind - tNote2Ind == 7) || 
+				((sNote1Ind - tNote1Ind == 7 + 12) && (sNote2Ind - tNote2Ind == 7 + 12)) ||
+				((sNote1Ind - tNote1Ind == 7 + 12 + 12) && (sNote2Ind - tNote2Ind == 7 + 12 + 12)))
+				&& !(sNote1.equals(sNote2))){
+				System.out.println("Parallel fifth (ST) at " + (i+1) + " and " + (i+2));
 			}
-			if ((sNote1Ind - tNote1Ind == 12) && (sNote2Ind - tNote2Ind == 12) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel octave (ST) at " + i);
+			if (((sNote1Ind - tNote1Ind == 12) && (sNote2Ind - tNote2Ind == 12) || 
+				((sNote1Ind - tNote1Ind == 12 + 12) && (sNote2Ind - tNote2Ind == 12 + 12)) ||
+				((sNote1Ind - tNote1Ind == 12 + 12 + 12) && (sNote2Ind - tNote2Ind == 12 + 12 + 12)))
+				&& !(sNote1.equals(sNote2))){
+				System.out.println("Parallel octave (ST) at " + (i+1) + " and " + (i+2));
 			}
-			if ((sNote1Ind - bNote1Ind == 7) && (sNote2Ind - bNote2Ind == 7) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel fifth (SB) at " + i);
+			if (((sNote1Ind - bNote1Ind == 7) && (sNote2Ind - bNote2Ind == 7) || 
+				((sNote1Ind - bNote1Ind == 7 + 12) && (sNote2Ind - bNote2Ind == 7 + 12)) ||
+				((sNote1Ind - bNote1Ind == 7 + 12 + 12) && (sNote2Ind - bNote2Ind == 7 + 12 + 12)))
+				&& !(sNote1.equals(sNote2))){
+				System.out.println("Parallel fifth (SB) at " + (i+1) + " and " + (i+2));
 			}
-			if ((sNote1Ind - bNote1Ind == 12) && (sNote2Ind - bNote2Ind == 12) && !(sNote1.equals(sNote2))){
-				System.out.println("Parallel octave (SB) at " + i);
+			if (((sNote1Ind - bNote1Ind == 12) && (sNote2Ind - bNote2Ind == 12) || 
+				((sNote1Ind - bNote1Ind == 12 + 12) && (sNote2Ind - bNote2Ind == 12 + 12)) ||
+				((sNote1Ind - bNote1Ind == 12 + 12 + 12) && (sNote2Ind - bNote2Ind == 12 + 12 + 12)))
+				&& !(sNote1.equals(sNote2))){
+				System.out.println("Parallel octave (SB) at " + (i+1) + " and " + (i+2));
 			}
 			if ((aNote1Ind - tNote1Ind == 7) && (aNote2Ind - tNote2Ind == 7) && !(aNote1.equals(aNote2))){
-				System.out.println("Parallel fifth (AT) at " + i);
+				System.out.println("Parallel fifth (AT) at " + (i+1) + " and " + (i+2));
 			}
 			if ((aNote1Ind - tNote1Ind == 12) && (aNote2Ind - tNote2Ind == 12) && !(aNote1.equals(aNote2))){
-				System.out.println("Parallel octave (AT) at " + i);
+				System.out.println("Parallel octave (AT) at " + (i+1) + " and " + (i+2));
 			}
-			if ((aNote1Ind - bNote1Ind == 7) && (aNote2Ind - bNote2Ind == 7) && !(aNote1.equals(aNote2))){
-				System.out.println("Parallel fifth (AB) at " + i);
+			if (((aNote1Ind - bNote1Ind == 7) && (aNote2Ind - bNote2Ind == 7) || 
+				((aNote1Ind - bNote1Ind == 7 + 12) && (aNote2Ind - bNote2Ind == 7 + 12)) ||
+				((aNote1Ind - bNote1Ind == 7 + 12 + 12) && (aNote2Ind - bNote2Ind == 7 + 12 + 12)))
+				&& !(aNote1.equals(aNote2))){
+				System.out.println("Parallel fifth (AB) at " + (i+1) + " and " + (i+2));
 			}
-			if ((aNote1Ind - bNote1Ind == 12) && (aNote2Ind - bNote2Ind == 12) && !(aNote1.equals(aNote2))){
-				System.out.println("Parallel octave (AB) at " + i);
+			if (((aNote1Ind - bNote1Ind == 12) && (aNote2Ind - bNote2Ind == 12) || 
+				((aNote1Ind - bNote1Ind == 12 + 12) && (aNote2Ind - bNote2Ind == 12 + 12)) ||
+				((aNote1Ind - bNote1Ind == 12 + 12 + 12) && (aNote2Ind - bNote2Ind == 12 + 12 + 12)))
+				&& !(aNote1.equals(aNote2))){
+				System.out.println("Parallel octave (AB) at " + (i+1) + " and " + (i+2));
 			}
-			if ((tNote1Ind - bNote1Ind == 7) && (tNote2Ind - bNote2Ind == 7) && !(tNote1.equals(tNote2))){
-				System.out.println("Parallel fifth (TB) at " + i);
+			if (((tNote1Ind - bNote1Ind == 7) && (tNote2Ind - bNote2Ind == 7) || 
+				((tNote1Ind - bNote1Ind == 7 + 12) && (tNote2Ind - bNote2Ind == 7 + 12)) ||
+				((tNote1Ind - bNote1Ind == 7 + 12 + 12) && (tNote2Ind - bNote2Ind == 7 + 12 + 12)))
+				&& !(tNote1.equals(tNote2))){
+				System.out.println("Parallel fifth (TB) at " + (i+1) + " and " + (i+2));
 			}
-			if ((tNote1Ind - bNote1Ind == 12) && (tNote2Ind - bNote2Ind == 12) && !(tNote1.equals(tNote2))){
-				System.out.println("Parallel octave (TB) at " + i);
+			if (((tNote1Ind - bNote1Ind == 12) && (tNote2Ind - bNote2Ind == 12) || 
+				((tNote1Ind - bNote1Ind == 12 + 12) && (tNote2Ind - bNote2Ind == 12 + 12)) ||
+				((tNote1Ind - bNote1Ind == 12 + 12 + 12) && (tNote2Ind - bNote2Ind == 12 + 12 + 12)))
+				&& !(tNote1.equals(tNote2))){
+				System.out.println("Parallel octave (TB) at " + (i+1) + " and " + (i+2));
 			}
 
 			if (durCount == curChordDur)

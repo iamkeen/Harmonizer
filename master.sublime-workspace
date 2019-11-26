@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"soprano",
+				"sopranoTrack"
+			],
+			[
+				"Short",
+				"ShortMessage"
+			],
+			[
+				"tempNote",
+				"tempNoteInd"
+			],
+			[
+				"midi",
+				"midiNote"
+			],
+			[
+				"sopra",
+				"sopranoChannel"
+			],
+			[
+				"short",
+				"ShortMessage"
+			],
+			[
+				"temp",
+				"tempNoteInd"
+			],
+			[
+				"curChor",
+				"curChordDur"
+			],
+			[
+				"dur",
+				"durCount"
+			],
+			[
+				"cur",
+				"curChord"
+			],
+			[
+				"curchor",
+				"curChordInd"
+			],
+			[
+				"curc",
+				"curChordDur"
+			],
+			[
+				"tno",
+				"tNote1Ind"
+			],
+			[
+				"sNote",
+				"sNote1Ind"
+			],
+			[
+				"aNo",
+				"aNote1Ind"
+			],
+			[
+				"sNote2",
+				"sNote2Ind"
+			],
+			[
+				"aNote1",
+				"aNote1Ind"
+			],
+			[
+				"snote",
+				"sNote1"
+			],
+			[
+				"anote",
+				"aNote2"
+			],
+			[
+				"enfor",
+				"enforeIntervalRuleHomophonic"
+			],
+			[
 				"tN",
 				"tNoteInd"
 			],
@@ -12,20 +92,8 @@
 				"doubleNote"
 			],
 			[
-				"temp",
-				"temp_chord"
-			],
-			[
-				"enfor",
-				"enforceOctaveRule"
-			],
-			[
 				"melo",
 				"melodyInd2"
-			],
-			[
-				"tno",
-				"tNoteInd"
 			],
 			[
 				"aNto",
@@ -34,10 +102,6 @@
 			[
 				"aNote",
 				"aNoteInd"
-			],
-			[
-				"sopra",
-				"soprano"
 			],
 			[
 				"gen",
@@ -352,10 +416,6 @@
 				"finalizeAllParts"
 			],
 			[
-				"cur",
-				"curDuration"
-			],
-			[
 				"splitRa",
 				"splitRawChordProg"
 			],
@@ -412,10 +472,6 @@
 				"Soprano"
 			],
 			[
-				"soprano",
-				"sopranoNote"
-			],
-			[
 				"bass",
 				"bassNote"
 			],
@@ -458,67 +514,29 @@
 			[
 				"chor",
 				"chordProg"
-			],
-			[
-				"P",
-				"PriorityQueue"
-			],
-			[
-				"len",
-				"length"
-			],
-			[
-				"state",
-				"state2"
-			],
-			[
-				"sol",
-				"solve_counter"
-			],
-			[
-				"olen",
-				"olen2"
-			],
-			[
-				"tiles",
-				"tiles1"
-			],
-			[
-				"goal",
-				"goal_moves"
-			],
-			[
-				"rand",
-				"rand_tiles"
-			],
-			[
-				"co",
-				"count"
-			],
-			[
-				"count",
-				"count_inversions"
-			],
-			[
-				"temp_",
-				"temp_tiles"
-			],
-			[
-				"coun",
-				"count_conflicts"
-			],
-			[
-				"col",
-				"col_count"
-			],
-			[
-				"confl",
-				"conflict_helper"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Harmonizer.java",
+			"settings":
+			{
+				"buffer_size": 23233,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Driver.java",
+			"settings":
+			{
+				"buffer_size": 9040,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
 		{
 			"file": "Note.java",
 			"settings":
@@ -541,25 +559,16 @@
 			"file": "ChoirNote.java",
 			"settings":
 			{
-				"buffer_size": 590,
+				"buffer_size": 592,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Harmonizer.java",
+			"file": "Generator.java",
 			"settings":
 			{
-				"buffer_size": 19040,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Driver.java",
-			"settings":
-			{
-				"buffer_size": 9063,
+				"buffer_size": 2469,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -618,15 +627,18 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Keen/Desktop/seniorProject/senior-project/test.mid",
+		"/C/Users/Keen/Desktop/seniorProject/senior-project/output/TTLS_homophonic_no_rests_no_partials.txt",
+		"/C/Users/Keen/Desktop/EE322/With_Remote/IRButtons.h",
+		"/C/Users/Keen/AppData/Local/Temp/Temp1_Stepper.zip/Stepper/src/Stepper.h",
+		"/C/Users/Keen/Desktop/seniorProject/senior-project/output/MK_homophonic_no_rests_partials.txt",
 		"/C/Users/Keen/Desktop/linux-5.2.13/linux-5.2.13/include/linux/amba/bus.h",
 		"/C/Users/Keen/Desktop/linux-5.2.13/linux-5.2.13/kernel/acct.c",
 		"/C/Users/Keen/Desktop/linux-5.2.13/linux-5.2.13/include/crypto/xts.h",
 		"/C/Users/Keen/Desktop/linux-5.2.13/linux-5.2.13/include/crypto/acompress.h",
 		"/C/Users/Keen/Desktop/linux-5.2.13/linux-5.2.13/include/kvm/arm_psci.h",
 		"/C/Users/Keen/Desktop/linux-5.2.13/pax_global_header",
-		"/C/Users/Keen/Desktop/seniorProject/senior-project/output/TTLS_homophonic_no_rests_no_partials.txt",
 		"/C/Users/Keen/Desktop/linux-5.3.2/drivers/cpufreq/cpufreq_performance.c",
-		"/C/Users/Keen/Desktop/seniorProject/senior-project/output/MK_homophonic_no_rests_partials.txt",
 		"/C/Users/Keen/Desktop/seniorProject/senior-project/output/TTLS_nonhomophonic_no_rests_no_partials.txt",
 		"/C/Users/Keen/Desktop/linux-5.3.2/kernel/async.c",
 		"/C/Users/Keen/Desktop/linux-5.3.2/drivers/net/ethernet/3com/3c59x.c",
@@ -742,10 +754,7 @@
 		"/C/xampp/htdocs/codeigniter/application/views/templates/header.php",
 		"/C/xampp/htdocs/codeigniter/application/views/pages/about.php",
 		"/C/xampp/htdocs/codeigniter/application/views/pages/home.php",
-		"/C/Users/Keen/Downloads/sample-data.sql",
-		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V005__business_schema.sql",
-		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V003__lookup_data.sql",
-		"/C/Users/Keen/Desktop/webdev_practice/sqlplayground/V002__schema.sql"
+		"/C/Users/Keen/Downloads/sample-data.sql"
 	],
 	"find":
 	{
@@ -764,6 +773,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"\"and\"",
 			"temp_chord",
 			"enforceOctaveRule",
 			"tempCounts",
@@ -780,6 +790,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\" and \"",
 			"tempChord"
 		],
 		"reverse": false,
@@ -791,11 +802,69 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "Harmonizer.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23233,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3778,
+								3778
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Driver.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9040,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								620,
+								620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1856.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "Note.java",
 					"semi_transient": false,
 					"settings":
@@ -823,7 +892,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "Chord.java",
 					"semi_transient": false,
 					"settings":
@@ -845,27 +914,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 562.0,
+						"translation.y": 1582.28571429,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "ChoirNote.java",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 590,
+						"buffer_size": 592,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								37,
-								37
+								35,
+								35
 							]
 						],
 						"settings":
@@ -880,61 +949,31 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Harmonizer.java",
+					"buffer": 5,
+					"file": "Generator.java",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19040,
+						"buffer_size": 2469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9609,
-								9609
+								914,
+								914
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3338.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "Driver.java",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9063,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5924,
-								5925
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Java/Java.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Java/Java.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -942,7 +981,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -980,10 +1019,10 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
-	"project": "",
+	"project": "master.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 80.0
 	},
 	"save_all_on_build": true,
 	"select_file":

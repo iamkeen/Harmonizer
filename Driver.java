@@ -6,11 +6,9 @@ public class Driver
 {	
 	public static void main(String args[])
 	{
-		// need to account for rests and notes not of full value
-		// (i.e. eigth notes in 4/4 (0.5 would be its value))
 		Scanner scanner = new Scanner(System.in);
 
-		System.out.println("====================================");
+		/*System.out.println("====================================");
 		System.out.println("= SIMPLE HARMONIZER PROTOTYPE (v1) =");
 		System.out.println("=       Keenan Noah Icarangal      =");
 		System.out.println("====================================");
@@ -72,7 +70,18 @@ public class Driver
 
 		System.out.println("Homophonic[1] or non-homophonic[2]?");
 		int mode = Integer.parseInt(scanner.nextLine());
-		System.out.println();		
+		System.out.println();*/
+
+		//6/8
+		String rawMelody = "(C4 1.5) (X0 1.5) (C4 1) (D4 0.5) (E4 1.5) (E4 1) (D4 0.5) (E4 1) (F4 0.5) (G4 3) (C5 0.5) (C5 0.5) (C5 0.5) (G4 0.5) (G4 0.5) (G4 0.5) (E4 0.5) (E4 0.5) (E4 0.5) (C4 0.5) (C4 0.5) (C4 0.5) (G4 1) (F4 0.5) (E4 1) (D4 0.5) (C4 3)";
+		String rawChordProg = "(C 13.5) (G 1.5) (C 4.5) (G 1.5) (C 3)";
+
+		String name = "";
+		//4/4
+		//String rawMelody = "(G4 1) (G4 1) (D5 1) (D5 1) (E5 1) (E5 1) (D5 2) (C5 1) (C5 1) (B4 1) (B4 1) (A4 1) (A4 1) (G4 2)";
+		//String rawChordProg = "(G 4) (C 2) (G 2) (Am 2) (G 2) (D 2) (G 2)";
+		String key = "G";
+		int mode = 1;		
 
 		String[] splitRawMelody = rawMelody.substring(1).split("\\(|\\s|\\)\\s\\(|\\)", 0);
 		String[] splitRawChordProg = rawChordProg.substring(1).split("\\(|\\s|\\)\\s\\(|\\)", 0);
@@ -167,6 +176,8 @@ public class Driver
 			System.out.print(temp.note + temp.octave + " " + temp.duration + "\n");
 		}
 		System.out.println();
+
+		Generator generator = new Generator(h.keyChromatic, h.soprano, h.alto, h.tenor, h.bass);//, h.alto, h.tenor, h.bass);
 	}
 }
 
